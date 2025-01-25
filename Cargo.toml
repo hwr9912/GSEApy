@@ -15,17 +15,9 @@ categories = ["science"]
 [lib]
 name = "gse"
 crate-type = ["cdylib"]
-# [[bin]]
-# name = "gsears"
-# path = "src/main.rs"
-
-[features]
-# https://github.com/PyO3/pyo3/discussions/2271
-extension-module = ["pyo3"]
-
 
 [dependencies]
-pyo3 = { version = "0.23.2", features = ["extension-module"], optional = true }
+pyo3 = "0.23.3"
 rand = {version = "*", features = ['small_rng']}
 rayon = "*"
 csv = "*"

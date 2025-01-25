@@ -28,7 +28,7 @@ class GSVA(GSEAbase):
         max_size: int = 500,
         threads: int = 1,
         seed: int = 123,
-        verbose: bool = False,
+        verbose: bool = True,
         **kwargs,
     ):
         super(GSVA, self).__init__(

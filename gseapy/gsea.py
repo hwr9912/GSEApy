@@ -170,7 +170,7 @@ class GSEA(GSEAbase):
         df = df.loc[df.abs().sum(axis=1) > 0, :]
         # remove rows that std are zeros for sample size >= 3 in each group
         if all(map(lambda a: a[1] >= 3, Counter(cls_dict.values()).items())):
-            df = df[df_std.abs().sum(axis=1) > 0]
+            df = df.loc[df_std.abs().sum(axis=1) > 0, :]
         df = df + 1e-08  # we don't like zeros in denominator !!!
         # data frame must have length > 1
         assert df.shape[0] > 1
